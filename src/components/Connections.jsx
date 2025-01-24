@@ -51,14 +51,14 @@ console.log("connections");
       
         return (
         
-        <div key={_id} className='m-4 p-4 bg-base-300 rounded-lg flex w-1/2 mx-auto justify-between'>
+        <div key={_id} className=' mx-auto m-7 md:m-4 p-7 md:p-4 bg-base-300 rounded-lg flex w-full md:w-1/2 md:mx-auto justify-between'>
          <div className='flex flex-row items-center'>
         
          <div><img alt='photo' className='w-20 h-20 rounded-full' src={photoURL}/></div>
           <div className='text-left mx-4'>
           <h2 className='font-bold text-xl'>{firstName +" "+lastName}</h2>
           {age&& gender&& <p>{age+", "+gender}</p>}
-          <p>{about}</p>
+          <p>{about.length > 20 ? about.substring(0, 20) + "..." : about}</p>
           </div>
 
           </div>

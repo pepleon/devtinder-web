@@ -42,13 +42,16 @@ const saveProfile = async () => {
 
 
   return (
- <> <div className='flex justify-center my-10'>  <div className='flex justify-center mx-10'>
+ <> <div className='flex justify-center my-10 flex-col md:flex-row'>
+  
+    <div className='flex justify-center mx-10'>
+    
     <div className="card bg-base-300 w-96 shadow-xl">
 <div className="card-body">
   <h2 className="card-title justify-center">Edit Profile</h2>
  
  
-  <div >
+  <div>
   <label className="form-control w-full max-w-xs my-2">
 <div className="label">
 <span className="label-text">First Name</span>
@@ -138,11 +141,11 @@ onChange={(e)=>{setAbout(e.target.value)}}
 
 
 
+<div className='m-10 flex justify-center'>
 
+    <UserCard  user = {{firstName, lastName, age, about, gender, photoURL}} edit = {true}  />
 
-    <UserCard user = {{firstName, lastName, age, about, gender, photoURL}} edit = {true}  />
-
-
+    </div>
 </div> 
 
 

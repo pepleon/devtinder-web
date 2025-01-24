@@ -60,7 +60,7 @@ useEffect(()=>{
 //</div>;
 
   return (
-    <div className='text-center justify-center my-10 '>
+    <div className='text-center justify-center my-10'>
 <RequestToast mess={mess} status={status}/>
 
 
@@ -80,24 +80,24 @@ useEffect(()=>{
       
         return (
         
-        <div key={_id} className='m-4 p-4 bg-base-300 rounded-lg flex w-2/3 mx-auto justify-between items-center'>
+        <div key={_id} className='m-7 p-3  md:m-4 md:p-4 bg-base-300 rounded-lg flex w-full md:w-2/3  md:mx-auto mx-auto justify-between items-center'>
           <div className='flex items-center'> 
           <div><img alt='photo' className='w-20 h-20 rounded-full' src={photoURL}/></div>
           <div className='text-left mx-4'>
           <h2 className='font-bold text-xl'>{firstName +" "+lastName}</h2>
           {age&& gender&& <p>{age+", "+gender}</p>}
-          <p>{about}</p>
+          <p>{about.length > 20 ? about.substring(0, 20) + "..." : about}</p>
           </div>
           </div>
         <div>
-        <button className="btn btn-primary mx-2"
+        <button className="btn btn-primary md:mx-2 size-13  md:size-max m-5"
         onClick={()=>{ reviewRequest("rejected", ID);
           dispatch(removeRequest(request._id));
           setStatus("Rejected");
         }
           }
         >Reject</button>
-        <button className="btn btn-secondary mx-2"
+        <button className="btn btn-secondary md:mx-2 size-13  md:size-max"
         
         onClick={() => {reviewRequest("accepted", ID);
           dispatch(removeRequest(request._id));

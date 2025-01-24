@@ -30,6 +30,7 @@ dispatch(removeUserFromFeed(_id));
     <div className="card bg-base-300 w-80 shadow-xl">
   <figure>
     <img
+      className='w-full h-auto'
       src={photoURL}
       alt="Shoes" />
   </figure>
